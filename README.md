@@ -3,12 +3,13 @@ A simple backend application built with **Node.js** and **Express.js** to perfor
 
 ---
 ##  Features
-- **User Authentication** using JWT
-- **CRUD operations** on a friends list
-- Data stored in-memory (no database)
-- Uses `req.body` to handle all input (no query/params)
-- **Tested with Postman**
-- Secure endpoints — only authenticated users can perform actions
+
+- **User Authentication** using JWT and Express Sessions  
+-  CRUD operations** on a friends list  
+-  Data stored **in-memory** (no database required)  
+-  Uses `req.body` only (no query or params for input)  
+-  **Tested with Postman**  
+-  All endpoints are protected — **only authenticated users can perform actions**
 
 # Project SetUP
 ## clone Repository
@@ -38,7 +39,7 @@ The server run on port 8080 by default
 "password":"password2"
 }
 
-*POST//login
+*POST/login
 ```bash
 {
 "username":"user2",
@@ -69,22 +70,22 @@ The server run on port 8080 by default
 
 *DELETE/friends/<email>
   - DElETE all friend by email
----  
+-------
 # Authentication Middleware
 
 All /friends routes are protected by middleware that verifies the JWT token stored in the session. Unauthorized requests receive a 403 error.
 
----
+-----------
 #Testing In Postman
 1.Register a new user using /register.
 2.Login with /login to generate a session token.
 3.Perform CRUD operations on /friends routes with the authenticated session.
-4.Screen shots are provided in the Repository 
+4.Screenshots testcase available Repository 
 ---
 #Notes
 * Emails used for friend objects should be fictional (e.g., example@gamil.com) to avoid conflicts.
 * JWT token expiration is configurable; default is 1 hour. You can change it (e.g., 60 seconds) for testing. 
----
+------
 # Summary
 This project demonstrates how to:
  * Secure RESTful API endpoints with JWT & session authentication
