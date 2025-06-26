@@ -77,10 +77,10 @@ All /friends routes are protected by middleware that verifies the JWT token stor
 
 -----------
 # Testing In Postman
-1.Register a new user using /register.
-2.Login with /login to generate a session token.
-3.Perform CRUD operations on /friends routes with the authenticated session.
-4.Screenshots testcase available Repository 
+ 1. Register a new user using /register.
+ 2. Login with /login to generate a session token.
+ 3. Perform CRUD operations on /friends routes with the authenticated session.
+ 4. Screenshots testcase available Repository 
 ------
 # Summary
 This project demonstrates how to:
